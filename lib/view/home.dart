@@ -91,11 +91,12 @@ class Home extends StatelessWidget {
                                   const BorderSide(color: Color(0xfff2f2f2)),
                             ),
                             hintText: "Find your product",
-                            hintStyle: const TextStyle(color: Colors.grey),
+                            hintStyle: const TextStyle(
+                                color: Colors.grey, fontSize: 16.0),
                             prefixIcon:
                                 const Icon(Icons.search, color: Colors.grey),
                             contentPadding: const EdgeInsets.symmetric(
-                                vertical: 15.0, horizontal: 15.0)),
+                                vertical: 10.0, horizontal: 15.0)),
                       ),
                     ),
                     SizedBox(width: size.width * 0.06),
@@ -198,6 +199,28 @@ class Home extends StatelessWidget {
                 ),
               )
             ],
+          ),
+          Positioned(
+            bottom: 45.0,
+            left: 40.0,
+            right: 40.0,
+            child: Container(
+              width: size.width * 0.7,
+              height: size.height * 0.07,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  Icon(Icons.home, color: Colors.pink),
+                  Icon(Icons.favorite_border, color: Colors.grey),
+                  Icon(Icons.search, color: Colors.grey),
+                  Icon(Icons.person, color: Colors.grey),
+                ],
+              ),
+            ),
           ),
         ],
       ),
